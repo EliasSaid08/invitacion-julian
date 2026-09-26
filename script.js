@@ -188,8 +188,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modoAmigos) {
       mensaje += '¡Nos vemos ahí!';
     } else {
-      const { total, sena } = montos(personas);
-      mensaje += `Total: $${formatARS(total)}, con una seña de $${formatARS(sena)} hasta el ${CONFIG.fechaSena}.`;
+      const { total } = montos(personas);
+      mensaje += `Total: $${formatARS(total)}.`;
     }
 
     window.open(`https://wa.me/${contacto.telefono}?text=${encodeURIComponent(mensaje)}`, '_blank');
