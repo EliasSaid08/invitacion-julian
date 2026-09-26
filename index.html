@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Sora:wght@300..700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Caveat:wght@400..700&family=Poppins:wght@300;400;500;600;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
     rel="stylesheet">
 
   <!-- Versión para amigos: abrir index.html?amigos  →  sin precios ni fechas de pago -->
@@ -28,14 +28,24 @@
 
 <body>
 
-  <!-- ===================== PANTALLA DE APERTURA ===================== -->
+  <!-- ===================== PANTALLA DE APERTURA: SOBRE CON SELLO ===================== -->
   <div id="intro">
-    <div class="sparkles" data-sparkles="18" aria-hidden="true"></div>
+    <div class="sparkles" data-sparkles="14" aria-hidden="true"></div>
     <div class="intro-inner">
-      <p class="intro-kicker">Una invitación especial</p>
-      <span class="intro-18">18</span>
+      <p class="intro-kicker">Mis 18</p>
       <p class="intro-name">Alan Julián</p>
-      <button type="button" id="openBtn" class="btn btn-silver">Abrir invitación</button>
+      <button type="button" id="openBtn" class="envelope-btn" aria-label="Abrir invitación">
+        <span class="envelope">
+          <span class="envelope-card">
+            <span class="envelope-card-linea"></span>
+            <span class="envelope-card-linea corta"></span>
+            <svg class="envelope-card-corazon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+          </span>
+          <span class="envelope-flap"></span>
+          <span class="wax-seal">18</span>
+        </span>
+      </button>
+      <p class="intro-hint">Presioná el sobre para abrirlo</p>
     </div>
   </div>
 
@@ -56,27 +66,94 @@
 
     <div class="invitation-container">
 
-      <!-- ===================== PORTADA ===================== -->
-      <header class="snap-section hero dark">
-        <div class="sparkles" data-sparkles="9" aria-hidden="true"></div>
-        <div class="hero-stack">
-          <p class="hero-kicker">Te invito a celebrar mis</p>
+      <!-- ===================== PORTADA — ESTILO DIARIO ===================== -->
+      <header class="snap-section hero diario">
+        <div class="sparkles" data-sparkles="7" aria-hidden="true"></div>
 
-          <div class="hero-figure">
-            <figure class="hero-photo" data-label="Foto de Alan">
-              <img src="assets/foto.jpg" alt="Alan Julián" onerror="this.closest('.hero-photo').classList.add('no-photo')">
-            </figure>
-            <span class="hero-18">18</span>
+        <!-- doodles sueltos -->
+        <svg class="doodle doodle-smiley" viewBox="0 0 40 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 6c4 6 10 8 16 6s10-8 16-2" />
+        </svg>
+        <svg class="doodle doodle-scribble-a" viewBox="0 0 40 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M2 8c3-6 6 6 9 0s6 6 9 0 6 6 9 0 6 6 9 0" />
+        </svg>
+        <svg class="doodle doodle-scribble-b" viewBox="0 0 40 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M2 8c3-6 6 6 9 0s6 6 9 0 6 6 9 0 6 6 9 0" />
+        </svg>
+        <svg class="doodle doodle-star-a" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        <svg class="doodle doodle-star-b" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        <svg class="doodle doodle-star-c" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        <svg class="doodle doodle-cake" viewBox="0 0 64 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 10c1-2 0-4-1-5M32 10c1-3-1-4-1-6M44 10c-1-2 0-4 1-5" />
+          <path d="M18 12h4v6h-4zM30 12h4v6h-4zM42 12h4v6h-4z" />
+          <path d="M6 44V26c0-3 2-5 5-5h42c3 0 5 2 5 5v18" />
+          <path d="M6 44h50" />
+          <path d="M6 34c3 2 5-2 8 0s5-2 8 0 5-2 8 0 5-2 8 0 5-2 8 0" />
+        </svg>
+
+        <div class="diario-title-wrap">
+          <p class="diario-title">¡Feliz cumple!!</p>
+        </div>
+
+        <div class="libro">
+          <div class="libro-pagina izquierda">
+            <span class="libro-texto">Mis 18</span>
           </div>
+          <div class="libro-pagina derecha">
+            <svg class="gorro-doodle" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 4l12 26H8z" />
+              <circle cx="20" cy="4" r="2.4" fill="currentColor" />
+              <path d="M8 30c4 2 20 2 24 0" />
+            </svg>
+            <figure class="polaroid" data-label="Foto de Alan">
+              <img src="assets/foto.jpeg" alt="Alan Julián" onerror="this.closest('.polaroid').classList.add('no-photo')">
+            </figure>
+          </div>
+        </div>
+        <div class="libro-nota" aria-hidden="true">
+          Estás invitado
+          <svg class="libro-nota-icono" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        </div>
 
-          <h1 class="hero-name">Alan Julián</h1>
-          <p class="hero-date">Sábado 14 de Noviembre</p>
+
+        <h1 class="hero-name">Alan Julián</h1>
+
+        <div class="player-card" id="playerCard">
+          <p class="player-hint">Presioná play para reproducir la canción</p>
+          <div class="player-progress" id="playerProgress">
+            <span class="player-progress-fill" id="playerProgressFill"></span>
+            <span class="player-progress-dot" id="playerProgressDot"></span>
+          </div>
+          <div class="player-controls">
+            <button type="button" class="player-btn" id="playerPrev" aria-label="Retroceder 10 segundos">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M11 18V6l-8.5 6 8.5 6zm0.5-6l8.5 6V6l-8.5 6z"/></svg>
+            </button>
+            <button type="button" class="player-btn player-btn-main" id="playerPlay" aria-label="Reproducir">
+              <svg class="icon-play-mini" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="icon-pause-mini" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+            </button>
+            <button type="button" class="player-btn" id="playerNext" aria-label="Adelantar 10 segundos">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M13 6v12l8.5-6L13 6zM12.5 12L4 6v12l8.5-6z"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="calendario-card">
+          <span class="calendario-mes" id="calMes">Noviembre</span>
+          <div class="calendario-dias-header">
+            <span>L</span><span>M</span><span>M</span><span>J</span><span>V</span><span>S</span><span>D</span>
+          </div>
+          <div class="calendario-grid" id="calGrid"></div>
         </div>
       </header>
 
       <!-- ===================== LA FIESTA ===================== -->
       <section class="snap-section fiesta blue">
         <div class="countdown-card">
+          <span class="cd-sparkle tl" aria-hidden="true">✦</span>
+          <span class="cd-sparkle tr" aria-hidden="true">✦</span>
+          <span class="cd-sparkle bl" aria-hidden="true">✦</span>
+          <span class="cd-sparkle br" aria-hidden="true">✦</span>
           <span class="countdown-title">Faltan</span>
           <div class="countdown">
             <div class="cd-item"><span id="cd-dias" class="cd-num">00</span><span class="cd-label">Días</span></div>
@@ -102,7 +179,7 @@
               <span class="info-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
               </span>
-              <div class="info-text"><span class="info-label">Hora</span><span class="info-value">A confirmar</span></div>
+              <div class="info-text"><span class="info-label">Hora</span><span class="info-value" data-hora>22:00 hs</span></div>
             </li>
             <li>
               <span class="info-icon" aria-hidden="true">
@@ -115,17 +192,24 @@
       </section>
 
       <!-- ===================== LA TARJETA (no aparece en la versión para amigos) ===================== -->
-      <section class="snap-section tarjeta silver" data-solo-pago>
+      <section class="snap-section tarjeta silver desordenado" data-solo-pago>
+        <div class="sparkles" data-sparkles="4" aria-hidden="true"></div>
+        <svg class="doodle doodle-star-d" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        <svg class="doodle doodle-star-e" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+        <svg class="doodle doodle-star-f" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
+
         <div class="tarjeta-card">
-          <h2 class="section-title">La tarjeta</h2>
+          <h2 class="section-title tarjeta-title">La tarjeta</h2>
 
           <div class="precio-hero">
             <span class="precio-num" data-precio>$40.000</span>
             <span class="precio-sub">por persona</span>
+            <svg class="precio-star" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg>
           </div>
 
           <ol class="pasos">
             <li class="paso paso-sena">
+              <span class="paso-cinta" aria-hidden="true"></span>
               <span class="paso-num">1</span>
               <div class="paso-body">
                 <span class="paso-titulo">Seña de <b data-sena>$20.000</b></span>
@@ -134,6 +218,7 @@
               </div>
             </li>
             <li class="paso">
+              <span class="paso-cinta" aria-hidden="true"></span>
               <span class="paso-num">2</span>
               <div class="paso-body">
                 <span class="paso-titulo">Resto: <b data-resto>$20.000</b></span>
@@ -142,6 +227,43 @@
               </div>
             </li>
           </ol>
+
+          <div class="alias-card">
+            <span class="alias-label">Alias para transferencia</span>
+
+            <div class="alias-row">
+              <span class="alias-value" data-alias>mariaburgos.bru.1252</span>
+              <button type="button" class="copy-btn" id="copyAliasBtn" aria-label="Copiar alias">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></svg>
+                <span class="copy-label">Copiar</span>
+              </button>
+            </div>
+          </div>
+
+          <p class="tarjeta-aclaracion">Podés abonar la seña y el resto por separado, o el total de una sola vez si lo preferís.</p>
+        </div>
+      </section>
+
+      <!-- ===================== GALERÍA — ROLLO FOTOGRÁFICO ===================== -->
+      <section class="snap-section galeria light">
+        <div class="sparkles" data-sparkles="6" aria-hidden="true"></div>
+        <div class="galeria-wrap">
+          <div class="filmstrip">
+            <button type="button" class="filmstrip-nav filmstrip-prev" id="filmPrev" aria-label="Foto anterior">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+            </button>
+            <div class="filmstrip-track" id="filmstripTrack">
+              <figure class="filmstrip-frame"><img src="assets/foto1.jpeg" alt="" onerror="this.src='assets/foto.jpeg'"></figure>
+              <figure class="filmstrip-frame"><img src="assets/foto2.jpeg" alt="" onerror="this.src='assets/foto.jpeg'"></figure>
+              <figure class="filmstrip-frame"><img src="assets/foto3.jpeg" alt="" onerror="this.src='assets/foto.jpeg'"></figure>
+              <figure class="filmstrip-frame"><img src="assets/foto4.jpeg" alt="" onerror="this.src='assets/foto.jpeg'"></figure>
+              <figure class="filmstrip-frame"><img src="assets/foto5.jpeg" alt="" onerror="this.src='assets/foto.jpeg'"></figure>
+            </div>
+            <button type="button" class="filmstrip-nav filmstrip-next" id="filmNext" aria-label="Foto siguiente">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+            </button>
+          </div>
+          <p class="galeria-hint">Deslizá o tocá las flechas para ver más fotos</p>
         </div>
       </section>
 
