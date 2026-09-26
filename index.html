@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#03040a" />
+  <meta name="description" content="Te invito a celebrar mis 18" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Sora:wght@300..700&display=swap"
+    rel="stylesheet">
+
+  <!-- Versión para amigos: abrir index.html?amigos  →  sin precios ni fechas de pago -->
+  <script>
+    (function () {
+      var p = new URLSearchParams(location.search);
+      if (p.has('amigos') || p.get('tipo') === 'amigos') document.documentElement.classList.add('modo-amigos');
+    })();
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+  <title>Alan Julián | Mis 18</title>
+</head>
+
+<body>
+
+  <!-- ===================== PANTALLA DE APERTURA ===================== -->
+  <div id="intro">
+    <div class="sparkles" data-sparkles="18" aria-hidden="true"></div>
+    <div class="intro-inner">
+      <p class="intro-kicker">Una invitación especial</p>
+      <span class="intro-18">18</span>
+      <p class="intro-name">Alan Julián</p>
+      <button type="button" id="openBtn" class="btn btn-silver">Abrir invitación</button>
+    </div>
+  </div>
+
+  <div class="app-wrapper">
+    <audio id="bg-audio" src="assets/musica.mp3" loop></audio>
+
+    <!-- Control flotante de música (se oculta solo si no existe assets/musica.mp3) -->
+    <button id="music-toggle-btn" class="music-toggle-btn" aria-label="Reproducir música">
+      <div id="music-icon-wrapper" class="music-icon-wrapper">
+        <svg id="icon-play" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path d="M8 5v14l11-7z" />
+        </svg>
+        <svg id="icon-pause" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="display:none;">
+          <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
+        </svg>
+      </div>
+    </button>
+
+    <div class="invitation-container">
+
+      <!-- ===================== PORTADA ===================== -->
+      <header class="snap-section hero dark">
+        <div class="sparkles" data-sparkles="9" aria-hidden="true"></div>
+        <div class="hero-stack">
+          <p class="hero-kicker">Te invito a celebrar mis</p>
+
+          <div class="hero-figure">
+            <figure class="hero-photo" data-label="Foto de Alan">
+              <img src="assets/foto.jpg" alt="Alan Julián" onerror="this.closest('.hero-photo').classList.add('no-photo')">
+            </figure>
+            <span class="hero-18">18</span>
+          </div>
+
+          <h1 class="hero-name">Alan Julián</h1>
+          <p class="hero-date">Sábado 14 de Noviembre</p>
+        </div>
+      </header>
+
+      <!-- ===================== LA FIESTA ===================== -->
+      <section class="snap-section fiesta blue">
+        <div class="countdown-card">
+          <span class="countdown-title">Faltan</span>
+          <div class="countdown">
+            <div class="cd-item"><span id="cd-dias" class="cd-num">00</span><span class="cd-label">Días</span></div>
+            <span class="cd-sep">:</span>
+            <div class="cd-item"><span id="cd-horas" class="cd-num">00</span><span class="cd-label">Horas</span></div>
+            <span class="cd-sep">:</span>
+            <div class="cd-item"><span id="cd-min" class="cd-num">00</span><span class="cd-label">Min.</span></div>
+            <span class="cd-sep">:</span>
+            <div class="cd-item"><span id="cd-seg" class="cd-num">00</span><span class="cd-label">Seg.</span></div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <h2 class="section-title">La fiesta</h2>
+          <ul class="info-list">
+            <li>
+              <span class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M16 3v4M8 3v4M3 10h18" /></svg>
+              </span>
+              <div class="info-text"><span class="info-label">Fecha</span><span class="info-value">Sábado 14 de Noviembre</span></div>
+            </li>
+            <li>
+              <span class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" /></svg>
+              </span>
+              <div class="info-text"><span class="info-label">Hora</span><span class="info-value">A confirmar</span></div>
+            </li>
+            <li>
+              <span class="info-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" /></svg>
+              </span>
+              <div class="info-text"><span class="info-label">Ubicación</span><span class="info-value">La ubicación será compartida una vez confirmada su presencia</span></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===================== LA TARJETA (no aparece en la versión para amigos) ===================== -->
+      <section class="snap-section tarjeta silver" data-solo-pago>
+        <div class="tarjeta-card">
+          <h2 class="section-title">La tarjeta</h2>
+
+          <div class="precio-hero">
+            <span class="precio-num" data-precio>$40.000</span>
+            <span class="precio-sub">por persona</span>
+          </div>
+
+          <ol class="pasos">
+            <li class="paso paso-sena">
+              <span class="paso-num">1</span>
+              <div class="paso-body">
+                <span class="paso-titulo">Seña de <b data-sena>$20.000</b></span>
+                <span class="paso-fecha">Hasta el <b data-fecha-sena>20 de octubre</b></span>
+                <span class="paso-nota">Con la seña queda confirmada tu asistencia</span>
+              </div>
+            </li>
+            <li class="paso">
+              <span class="paso-num">2</span>
+              <div class="paso-body">
+                <span class="paso-titulo">Resto: <b data-resto>$20.000</b></span>
+                <span class="paso-fecha">Hasta el <b data-fecha-resto>7 de noviembre</b></span>
+                <span class="paso-nota">Una semana antes de la fiesta</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ===================== CONFIRMACIÓN ===================== -->
+      <section class="snap-section confirmacion dark">
+        <div class="rsvp-card">
+          <h2 class="section-title">Confirmá tu asistencia</h2>
+          <p class="rsvp-desc">Contanos quién sos y cuántos van a venir</p>
+
+          <div class="rsvp-form">
+            <div class="form-group">
+              <label for="guestNameInput">Tu nombre o el de tu familia</label>
+              <input type="text" id="guestNameInput" class="rsvp-input" placeholder="Ej: Familia Pérez" maxlength="60" autocomplete="name" />
+            </div>
+
+            <div class="counter-group">
+              <span class="counter-label">Personas</span>
+              <div class="counter-control">
+                <button type="button" class="counter-btn" data-action="dec" aria-label="Restar persona">&#8722;</button>
+                <span class="counter-value" id="ticketsCount">1</span>
+                <button type="button" class="counter-btn" data-action="inc" aria-label="Sumar persona">+</button>
+              </div>
+              <span class="counter-price" data-solo-pago><span data-precio></span> c/u</span>
+            </div>
+
+            <p class="rsvp-error" id="rsvp-error"></p>
+          </div>
+
+          <!-- Resumen de pago (no aparece en la versión para amigos) -->
+          <div class="resumen" data-solo-pago>
+            <div class="resumen-row">
+              <span class="resumen-label">Seña<small>hasta el <span data-fecha-sena>20 de octubre</span></small></span>
+              <b id="res-sena">$20.000</b>
+            </div>
+            <div class="resumen-row">
+              <span class="resumen-label">Resto<small>hasta el <span data-fecha-resto>7 de noviembre</span></small></span>
+              <b id="res-resto">$20.000</b>
+            </div>
+            <div class="resumen-row resumen-total">
+              <span class="resumen-label">Total</span>
+              <b id="res-total">$40.000</b>
+            </div>
+          </div>
+
+          <div class="rsvp-buttons" id="rsvpButtons"></div>
+        </div>
+      </section>
+
+      <!-- ===================== FINAL ===================== -->
+      <section class="snap-section final dark">
+        <span class="final-18" aria-hidden="true">18</span>
+        <div class="final-card">
+          <div class="final-head">
+            <span class="final-name">Alan Julián</span>
+            <div class="rule" aria-hidden="true">
+              <span></span>
+              <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor" /></svg>
+              <span></span>
+            </div>
+          </div>
+          <div class="final-message">
+            <p class="final-text">Gracias por acompañarme en este momento tan especial.</p>
+            <p class="final-text final-text-close">¡Te espero para celebrar juntos mis 18!</p>
+          </div>
+        </div>
+
+        <footer class="invitation-footer">
+          <p class="footer-dev">Desarrollado por Elías Said</p>
+          <a class="footer-more" href="https://wa.me/5493865244579?text=Hola%20El%C3%ADas%2C%20vi%20la%20invitaci%C3%B3n%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n." target="_blank" rel="noopener noreferrer">Click aquí para más información</a>
+        </footer>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
