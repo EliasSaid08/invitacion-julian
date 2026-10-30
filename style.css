@@ -1308,3 +1308,29 @@ body {
   text-align: center;
 }
 .regalo-card .alias-card { margin-top: 2rem; }
+
+/* ============ DATOS DESTACADOS (fondo oscuro) ============ */
+.info-destacado {
+  align-self: flex-start;
+  margin-top: 0.2rem;
+  padding: 0.4rem 0.95rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #14161d 0%, #000 100%);
+  border: 1px solid var(--gold);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+  color: var(--gold-light);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+.regalo-card .alias-value {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #14161d 0%, #000 100%);
+  border: 1px solid var(--gold);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  color: var(--gold-light);
+  font-size: 1.5rem;
+}
+.regalo-card .alias-card { border: 1.5px solid var(--gold); }
