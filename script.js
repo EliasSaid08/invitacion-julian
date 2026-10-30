@@ -13,6 +13,7 @@ const CONFIG = {
   diasAntesResto: 7,                       // el resto se abona hasta una semana antes del evento
 
   alias: 'mariaburgos.bru.1252',           // alias para la transferencia de la tarjeta
+  aliasRegalo: 'alancaro17',               // alias de Julián para la sugerencia de regalo (versión amigos)
 
   maxPersonas: 10,                         // máximo que se puede confirmar de una vez
 
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fill('[data-fecha-resto]', fechaRestoTexto);
   fill('[data-hora]', CONFIG.horaTexto);
   fill('[data-alias]', CONFIG.alias);
+  fill('[data-alias-regalo]', CONFIG.aliasRegalo);
 
   // ---------- Destellos ----------
   const STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z" fill="currentColor"/></svg>';
@@ -209,11 +211,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ---------- Copiar alias ----------
-  const copyBtn = document.getElementById('copyAliasBtn');
-  const copyLabel = copyBtn ? copyBtn.querySelector('.copy-label') : null;
-  if (copyBtn) {
+  const setupCopy = (btnId, getTexto) => {
+    const copyBtn = document.getElementById(btnId);
+    if (!copyBtn) return;
+    const copyLabel = copyBtn.querySelector('.copy-label');
     copyBtn.addEventListener('click', () => {
-      const texto = CONFIG.alias;
+      const texto = getTexto();
       const onCopied = () => {
         copyBtn.classList.add('copied');
         if (copyLabel) copyLabel.textContent = '¡Copiado!';
@@ -238,7 +241,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.removeChild(temp);
       }
     });
-  }
+  };
+  setupCopy('copyAliasBtn', () => CONFIG.alias);
+  setupCopy('copyAliasRegaloBtn', () => CONFIG.aliasRegalo);
 
   // ---------- Música ----------
   const audio = document.getElementById('bg-audio');
