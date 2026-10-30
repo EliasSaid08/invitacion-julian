@@ -68,6 +68,8 @@ body {
 .invitation-container::-webkit-scrollbar { display: none; }
 
 .modo-amigos [data-solo-pago] { display: none !important; }
+[data-solo-amigos] { display: none !important; }
+.modo-amigos [data-solo-amigos] { display: flex !important; }
 
 /* ============ SECCIONES ============ */
 .snap-section {
@@ -1294,3 +1296,15 @@ body {
   * { animation: none !important; transition: none !important; }
   .spark { opacity: 0.6; }
 }
+
+/* ============ SUGERENCIA DE REGALO (versión amigos) ============ */
+.regalo-card { gap: min(1.6dvh, 0.8rem); }
+.regalo-icono { color: var(--gold-deep); }
+.regalo-texto {
+  max-width: 28ch;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--ink);
+  text-align: center;
+}
+.regalo-card .alias-card { margin-top: 2rem; }
